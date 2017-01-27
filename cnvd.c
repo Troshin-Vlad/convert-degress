@@ -6,7 +6,7 @@
 #include <string.h>
 
 
-#define VERSION 1.5
+#define VERSION 1.0
 
 #define CLR_RED "\033[31m"
 #define CLR_GRN "\033[32m"
@@ -17,7 +17,7 @@ void version();
 void help();
 
 int main(int argc,char *argv[]){
-	
+
 	/*
 	  -C - Цельсий 
 	  -F - Фаренгейт
