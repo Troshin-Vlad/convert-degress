@@ -2,3 +2,14 @@ Author: Tr.Vlad
 Date: 23.01.17
 
 Title: Convector Degress
+Description: Convert Degress
+
+
+Installation:
+
+$ make
+
+
+if dont't have Makefile or tool make
+
+$ gcc cnvd.c -o cnvd

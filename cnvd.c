@@ -1,10 +1,7 @@
-// Author Tr.Vlad [2016]
-
 #include <stdio.h>
 #include <unistd.h>
 #include <stdlib.h>
 #include <string.h>
-
 
 #define VERSION 1.0
 
@@ -12,7 +9,7 @@
 #define CLR_GRN "\033[32m"
 #define CLR_DEF "\033[0m"
 
-void error(char *str);
+void error(const char *str);
 void version();
 void help();
 
@@ -37,9 +34,9 @@ int main(int argc,char *argv[]){
 			version();
 		i++;
 	}
-	
+
 	if( argc != 4 ){
-		error("you need select 2 option\n");
+		error("you need select 2 option");
 	}
 
 	//chars for options
@@ -74,8 +71,8 @@ int main(int argc,char *argv[]){
 		else if( strcmp(begin_char, Ke) == 0 ){
 			Kel = deg;
 			Cel = Kel - 273.15;
-			printf("Кельвин(Kelvin): %0.2f\n",Kel);	
-		}		
+			printf("Кельвин(Kelvin): %0.2f\n",Kel);
+		}
 		else if( strcmp(begin_char, Re) == 0 ){
 			Rea = deg;
 			Cel = Rea*1.25;
@@ -104,7 +101,7 @@ int main(int argc,char *argv[]){
 		else{
 			error("unknow frist option");
 		}
-	
+
 
 		if( strcmp(end_char,"-C") == 0){
 			printf("Цельсий(Celsius): %0.2f\n",Cel);
@@ -145,8 +142,9 @@ int main(int argc,char *argv[]){
 
 }
 
-void error(char *str){
+void error(const char *str){
 	printf("[%serror%s]: %s\n",CLR_RED,CLR_DEF,str);
+	printf("print help page: cnvd -h\n");
 	exit(1);
 }
 
